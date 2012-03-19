@@ -20,19 +20,19 @@ HTML中的输出变量使用`{{...}}`
 ###语句：支持if语句，for语句，语句使用{{}}括起来
 * if语法：(else if 和 else 可选)
 
-    {{if(...)}}
-        ...
-    {{else if(...)}}
-        ...
-    {{else}}
-        ...
-    {{endif}}
+    \{\{if(\.\.\.)\}\}
+        \.\.\.
+    \{\{else if(\.\.\.)\}\}
+        \.\.\.
+    \{\{else\}\}
+        \.\.\.
+    \{\{endif\}\}
 
 * for语法：(key和item可选，默认key值为_key，item值为_item)
 
-    {{for data=数据list key=索引 item=元}}
-        ...
-    {{endfor}}
+    \{\{for data=数据list key=索引 item=元\}\}
+        \.\.\.
+    \{\{endfor\}\}
 
 ###注释：HTML风格注释，可以支持多行
 
@@ -52,13 +52,13 @@ HTML中的输出变量使用`{{...}}`
 * seajs方式
 
     var tpl = require(生成好的模板文件);
-    tpl.render({...}); // json数据
+    tpl.render(data); // json数据
 
 * 普通function方式：
 例如使用： tpl hello.html --fn my.tpl.hello 生成模板hello.tpl.js  
 引入该js后可以使用：(需要事先有my.tpl这个命名空间，可以自定义)  
 
-    my.tpl.hello.render({...}); // json数据
+    my.tpl.hello.render(data); // json数据
 
 或者自己将其复制到任意的地方来使用
 
