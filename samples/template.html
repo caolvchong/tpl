@@ -1,0 +1,49 @@
+<!--
+     模板语法：
+	 变量：HTML中的输出变量使用{{...}}
+     语句：支持if语句，for语句，语句使用{{}}括起来
+	      if语法：(else if 和 else 可选)
+		      {{if(...)}}
+			     ...
+			  {{else if(...)}}
+			     ...
+			  {{else}}
+			     ...
+			  {{endif}}
+	       for语法：(key和item可选，默认key值为_key，item值为_item)
+		      {{for data=数据list key=索引 item=元}}
+			      ...
+			  {{endfor}}
+     注释：HTML风格注释，可以支持多行
+ -->
+<div class="box">
+	<h1 class="title">{{title}}</h1><!-- 单行注释 -->
+	<label>姓名：</label>
+    <span>{{name}}</span>
+    <label>性别：</label>
+	{{if(sex == 1)}}
+		<span>男</span>
+	{{else if(sex == 2)}}
+		<span>女</span>
+	{{else}}
+		<span>未知</span>
+	{{endif}}
+
+	<ul class="list">
+	{{for data=friendList key=key item=friend}}
+	    <li>
+	    	<em>{{key}}</em>
+			<label>姓名：</label>
+			<span>{{friend.name}}</span>
+			<label>性别：</label>
+			{{if(friend.sex == 1)}}
+                <span>男</span>
+            {{else if(friend.sex == 2)}}
+                <span>女</span>
+            {{else}}
+                <span>未知</span>
+            {{endif}}
+	    </li>
+	{{endfor}}
+	</ul>
+</div>
