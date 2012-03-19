@@ -1,11 +1,9 @@
 #将html模板转化为javascript模块
 
 ##目的
----
 减轻前端拼接大量HTML以及维护时候的困难程度
 
 ##安装
----
 1. 安装node，参见：https://github.com/joyent/node
 
 2. 安装tpl
@@ -17,7 +15,6 @@
     添加 alias tpl=~/tpl/src/tpl.bin.js，保存
 
 ##html模板语法
----
 ###变量
 HTML中的输出变量使用`{{...}}`
 ###语句：支持if语句，for语句，语句使用{{}}括起来
@@ -42,7 +39,6 @@ HTML中的输出变量使用`{{...}}`
     <!-- 注释内容 -->
      
 ##使用
----
 ###命令帮助
 
     tpl 模板文件 [目标文件] [ --fn name] [ --charset charset]  
