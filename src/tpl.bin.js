@@ -11,7 +11,7 @@ var util = {
     helper: function() {
         var text = '';
         text += 'usage:\n';
-        text += '\ttpl source [ destFile] [ --type fuction] [ --charset charset]\n\n\n';
+        text += '\ttpl sourceFile [ targetFile] [ --fn fnName] [ --charset charset]\n\n\n';
         text += 'see version:\n'
         text += '\ttpl --version\n\n';
         text += 'see helper:\n'
