@@ -1,0 +1,27 @@
+{
+  "name": "tpl2js",
+  "version": "0.0.2",
+  "description": "NodeJS module to convert HTML template to javascript module",
+  "preferGlobal": "true",
+  "main": "./lib/tpl.bin.js",
+  "bin": {
+    "tpl": "lib/tpl.bin.js"
+  },
+  "author": "caolvchong <caolvchong@gmail.com> (http://firejs.blogspot.com/)",
+  "keywords": [
+    "HTML",
+    "template",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/caolvchong/tpl.git"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "homepage": "https://github.com/caolvchong/tpl"
+}

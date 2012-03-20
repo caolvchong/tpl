@@ -6,7 +6,14 @@
 ##安装
 1. 安装node，参见：https://github.com/joyent/node
 
-2. 安装tpl
+2. 安装npm，参见：https://github.com/isaacs/npm
+
+3. 安装tpl
+* npm方式：
+
+        $ npm install tpl2js -g
+
+* 源码方式：
 
         $ cd ~
         $ git clone git://github.com/caolvchong/tpl.git
