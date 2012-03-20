@@ -1,8 +1,7 @@
-define(function(require, exports) {
-    var tpl = require('./test.tpl.js');
+(function() {
     window.onload = function() {
         setTimeout(function() {
-            document.body.innerHTML += tpl.render({
+            document.body.innerHTML += testTpl.render({
                 title: 'hello',
                 name: '草履虫',
                 sex: 1,
@@ -18,7 +17,7 @@ define(function(require, exports) {
             });
             
             setTimeout(function() {
-                document.body.innerHTML += tpl.render({
+                document.body.innerHTML += testTpl.render({
                     title: 'hello2',
                     name: '草履虫2',
                     sex: 2,
@@ -35,4 +34,4 @@ define(function(require, exports) {
             }, 3000);
         }, 1500);
     };
-});
+})();
