@@ -9,17 +9,17 @@
 2. 安装npm，参见：https://github.com/isaacs/npm
 
 3. 安装tpl
-* npm方式：
+    * npm方式：
 
-        $ npm install tpl2js -g
+            $ npm install tpl2js -g
 
-* 源码方式：
+    * 源码方式：
 
-        $ cd ~
-        $ git clone git://github.com/caolvchong/tpl.git
-        $ cd tpl
-        $ vim ~/.bashrc
-        添加 alias tpl=~/tpl/src/tpl.bin.js，保存
+            $ cd ~
+            $ git clone git://github.com/caolvchong/tpl.git
+            $ cd tpl
+            $ vim ~/.bashrc
+            添加 alias tpl=~/tpl/src/tpl.bin.js，保存
     
 ##html模板语法
 ###变量

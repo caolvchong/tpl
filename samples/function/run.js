@@ -2,32 +2,37 @@
     window.onload = function() {
         setTimeout(function() {
             document.body.innerHTML += testTpl.render({
-                title: 'hello',
-                name: '草履虫',
+                title: '关系（一）',
+                name: '张三',
                 sex: 1,
                 friendList: [{
-                    name: '老虫',
+                    name: '李四',
                     sex: 2
                 }, {
-                    name: '大虫'
+                    name: '王五'
                 }, {
-                    name: '小虫',
+                    name: '赵六',
                     sex: 1
                 }]
             });
             
             setTimeout(function() {
                 document.body.innerHTML += testTpl.render({
-                    title: 'hello2',
-                    name: '草履虫2',
+                    title: '关系（二）',
+                    name: '李四',
                     sex: 2,
                     friendList: [{
-                        name: '老虫2',
+                        name: '张三',
                         sex: 1
                     }, {
-                        name: '大虫2'
+                        name: '王五'
                     }, {
-                        name: '小虫2',
+                        name: '钱七',
+                        sex: 2
+                    }, {
+                        name: '孙二'
+                    }, {
+                        name: '陈八',
                         sex: 2
                     }]
                 });

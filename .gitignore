@@ -16,3 +16,4 @@ Thumbs.db
 *.swo
 *.log
 *.class
+*.tmp_*
