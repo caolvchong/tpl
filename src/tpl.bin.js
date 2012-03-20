@@ -39,13 +39,12 @@ var util = {
 	}
 };
 
-
 if ($2 == '--helper') { // 查看帮助
     util.out(util.helper());
 } else if ($2 == '--version') { // 查看版本
     util.out(util.version());
 } else { // 生成模板
-    if (util.checkFileIsExists($2)) {// 判断文件是否存在
+    if ($2 && util.checkFileIsExists($2)) {// 判断文件是否存在
         src = path.resolve($2);
         if (!$3 || $3 == '--fn' || $3 == '--charset') { // 不存在目标文件参数
             dest = src.replace(path.extname($2), '.tpl.js');

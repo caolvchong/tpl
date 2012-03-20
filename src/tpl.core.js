@@ -100,6 +100,7 @@ var run = function(config, callback) {
 			data = 'define' + source + ';';
 		}
         fs.writeFile(config.dest, data, config.charset, callback);
+		
     });
 };
 exports.run = run;
