@@ -8,31 +8,31 @@
 
 2. 安装tpl
 
-    $ cd ~
-    $ git clone git://github.com/caolvchong/tpl.git
-    $ cd tpl
-    $ vim ~/.bashrc
-    添加 alias tpl=~/tpl/src/tpl.bin.js，保存
-
+        $ cd ~
+        $ git clone git://github.com/caolvchong/tpl.git
+        $ cd tpl
+        $ vim ~/.bashrc
+        添加 alias tpl=~/tpl/src/tpl.bin.js，保存
+    
 ##html模板语法
 ###变量
 HTML中的输出变量使用`{{...}}`
 ###语句：支持if语句，for语句，语句使用{{}}括起来
 * if语法：(else if 和 else 可选)
 
-    \{\{if(\.\.\.)\}\}
-        \.\.\.
-    \{\{else if(\.\.\.)\}\}
-        \.\.\.
-    \{\{else\}\}
-        \.\.\.
-    \{\{endif\}\}
+        {{if(...)}}
+            ...
+        {{else if(...)}}
+            ...
+        {{else}}
+            ...
+        {{endif}}
 
 * for语法：(key和item可选，默认key值为_key，item值为_item)
 
-    \{\{for data=数据list key=索引 item=元\}\}
-        \.\.\.
-    \{\{endfor\}\}
+        {{for data=数据list key=索引 item=元}}
+            ...
+        {{endfor}}
 
 ###注释：HTML风格注释，可以支持多行
 
@@ -51,14 +51,14 @@ HTML中的输出变量使用`{{...}}`
 ###使用生成好的模板
 * seajs方式
 
-    var tpl = require(生成好的模板文件);
-    tpl.render(data); // json数据
+        var tpl = require(生成好的模板文件);
+        tpl.render(data); // json数据
 
 * 普通function方式：
 例如使用： tpl hello.html --fn my.tpl.hello 生成模板hello.tpl.js  
 引入该js后可以使用：(需要事先有my.tpl这个命名空间，可以自定义)  
 
-    my.tpl.hello.render(data); // json数据
+        my.tpl.hello.render(data); // json数据
 
 或者自己将其复制到任意的地方来使用
 
