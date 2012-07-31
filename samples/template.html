@@ -10,8 +10,17 @@
 			  {{else}}
 			     ...
 			  {{endif}}
-	       for语法：(key和item可选，默认key值为_key，item值为_item)
-		      {{for data=数据list key=索引 item=元}}
+	       for语法：
+              key、item、reverse、start、end、step可选
+              默认
+                key值为_key
+                item值为_item
+                reverse为false
+                start为0（reverse为true时为数组长度-1）
+                end为数组长度（reverse为true时为-1）
+                step为步长1
+
+		      {{for data=数据list key=索引 item=元 start=起始索引 end=结束索引 reverse=是否逆序 step=步长}}
 			      ...
 			  {{endfor}}
      注释：HTML风格注释，可以支持多行
@@ -37,6 +46,26 @@
 	<div class="fri-bar">朋友：</div>
 	<ul class="list">
 	{{for data=friendList key=key item=friend}}
+	    <li>
+	    	<em>{{+key + 1}}. </em>
+			<span class="name">
+			    <label>姓名</label>：
+			    <span>{{friend.name}}</span>
+			</span>
+			<span class="sex">
+				<label>性别</label>：
+				{{if(friend.sex == 1)}}
+	                <span>男</span>
+	            {{else if(friend.sex == 2)}}
+	                <span>女</span>
+	            {{else}}
+	                <span>未知</span>
+	            {{endif}}
+			</span>
+	    </li>
+	{{endfor}}
+<li>---------------------</li>
+	{{for data=friendList key=key item=friend reverse=true step=2}}
 	    <li>
 	    	<em>{{+key + 1}}. </em>
 			<span class="name">
