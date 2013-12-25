@@ -1,6 +1,6 @@
 {
   "name": "tpl2js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NodeJS module to convert HTML template to javascript module",
   "preferGlobal": "true",
   "main": "./lib/tpl.bin.js",
