@@ -19,7 +19,7 @@
             $ git clone git://github.com/caolvchong/tpl.git
             $ cd tpl
             $ vim ~/.bashrc
-            添加 alias tpl=~/tpl/src/tpl.bin.js，保存
+            添加 alias tpl=~/tpl/lib/tpl.bin.js，保存
     
 ##html模板语法
 ###变量
