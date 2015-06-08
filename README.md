@@ -70,3 +70,52 @@ HTML中的输出变量使用`{{...}}`
 或者自己将其复制到任意的地方来使用
 
 详细的使用参看samples中的例子
+
+
+###用作普通 Node 模块
+
+    var Tpl = require('tpl2js'); 
+
+* 模板文件必须存在
+* 只接受两个参数：模板路径，编码（默认 UTF-8）
+
+* 使用方式
+
+        var Tpl = require('tpl2js'); 
+        var template = Tpl('./test.tpl', 'utf8');       
+
+        var str = "";
+        var data = {
+          title: '关系（一）',
+          name: '张三',
+          sex: 1,
+          friendList: [{
+            name: '李四',
+            sex: 2
+          }, {
+            name: '王五'
+          }, {
+            name: '赵六',
+            sex: 1
+          }]
+        };
+        template.compile(function(err, obj) {
+          if(err) {
+            console.log(err);
+          }else {
+            str = obj.render(data);         //render 得到渲染后的值
+            console.log(str);
+          }
+        })
+
+
+
+详细的使用参看samples中的例子
+
+
+
+
+
+
+
+
